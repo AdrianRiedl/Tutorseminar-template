@@ -9,29 +9,35 @@
 
   \centering
 
-  \IfFileExists{logos/tum.pdf}{%
-    \includegraphics[height=20mm]{logos/tum.pdf}
+  \IfFileExists{logos/TUM_black_white.pdf}{%
+    \includegraphics[height=20mm]{logos/TUM_black_white.pdf}
   }{%
     \vspace*{20mm}
   }
 
-  \vspace{5mm}
+  \vspace{20mm}
   {\huge\MakeUppercase{\getFaculty{}}}\\
 
   \vspace{5mm}
-  {\large\MakeUppercase{\getUniversity{}}}\\
+  {\large\MakeUppercase{der \getUniversity{}}}\\
 
   \vspace{20mm}
   {\Large \getDoctype{}}
 
   \vspace{15mm}
-  {\huge\bfseries \getTitle{}}
+  {\huge\bfseries \getTitleGer{}}
+
+  \vfill{}
+  \begin{tabular}{l l}
+    AutorIn:          & \getAuthor{} \\
+    Prüfer:      & \getSupervisor{} \\
+    Betreuer:         & \getAdvisor{} \\
+    Datum: & \getSubmissionDate{} \\
+  \end{tabular}
 
   \vspace{15mm}
-  {\LARGE \getAuthor{}}
+  \IfFileExists{logos/FAK_IN_CMYK.pdf}{%
 
-  \IfFileExists{logos/faculty.pdf}{%
-    \vfill{}
-    \includegraphics[height=20mm]{logos/faculty.pdf}
+    \includegraphics[height=20mm]{logos/FAK_IN_CMYK.pdf}
   }{}
 \end{titlepage}

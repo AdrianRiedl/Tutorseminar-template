@@ -2,38 +2,37 @@
 
 % TODO: decide if one-sided/two-sided
 %\documentclass[headsepline,footsepline,footinclude=false,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc,BCOR=12mm,DIV=12]{scrbook} % two-sided
-\documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc]{scrbook} % one-sided
+\documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=12pt,paper=a4,listof=totoc,bibliography=totoc]{scrbook} % one-sided
 
 % TODO: change citation style in settings
 \input{settings}
 
 % TODO: change thesis information
 \newcommand*{\getUniversity}{Technische Universität München}
-\newcommand*{\getFaculty}{Department of Informatics}
-\newcommand*{\getTitle}{Thesis title}
-\newcommand*{\getTitleGer}{Titel der Abschlussarbeit}
-\newcommand*{\getAuthor}{Author}
-\newcommand*{\getDoctype}{Thesis type (Bachelor's Thesis in Informatics, Master's Thesis in Robotics, \ldots)}
-\newcommand*{\getSupervisor}{Supervisor}
-\newcommand*{\getAdvisor}{Advisor}
-\newcommand*{\getSubmissionDate}{Submission date}
+\newcommand*{\getFaculty}{Fakultät für Informatik}
+\newcommand*{\getTitleGer}{Titel der Abschlussarbeit} % TODO
+\newcommand*{\getAuthor}{Author} % TODO
+\newcommand*{\getDoctype}{Seminararbeit im Modul Didaktisches und pädagogisches Training für Tutoren (IN9028)}
+\newcommand*{\getSupervisor}{Prof. Dr. Thomas Neumann}
+\newcommand*{\getAdvisor}{Dr. Robert Heininger}
+\newcommand*{\getSubmissionDate}{Submission date} % TODO
+\newcommand*{\getSemester}{Semester} % TODO
 \newcommand*{\getSubmissionLocation}{Munich}
 
 \begin{document}
-
+%% sets the line space to 15 pt
+%% has to be inside document
+\setlength{\baselineskip}{15pt}
 % Set page numbering to avoid "destination with the same identifier has been already used" warning for cover page.
 % (see https://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Problems_with_Links_and_Pages).
 \pagenumbering{alph}
+\frontmatter{}
 \input{pages/cover}
 
-\frontmatter{}
-
-\input{pages/title}
-\input{pages/disclaimer}
-\input{pages/acknowledgments}
-\input{pages/abstract}
 \microtypesetup{protrusion=false}
 \tableofcontents{}
+\listoffigures{}
+\listoftables{}
 \microtypesetup{protrusion=true}
 
 \mainmatter{}
@@ -41,12 +40,8 @@
 \input{chapters/01_introduction}
 % TODO: add more chapters here
 
-\appendix{}
+\input{chapters/anhang}
 
-\microtypesetup{protrusion=false}
-\listoffigures{}
-\listoftables{}
-\microtypesetup{protrusion=true}
 \printbibliography{}
 
 \end{document}

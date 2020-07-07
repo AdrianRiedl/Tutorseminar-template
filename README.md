@@ -1,3 +1,7 @@
+Adaption of https://github.com/fwalch/tum-thesis-latex/issues for a template for the Tutorseminar
+
+Feel free to use it as an inspiration for your project.
+
 # LaTeX template for TUM theses
 
 This is a LaTeX template created according to the guidelines for TUM informatics theses in SS 2013. **Always check the [current formatting guidelines][thesis-guidelines] before you hand in.** See [`build/main.pdf`][sample-pdf] for an example PDF created with this template.
